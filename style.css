@@ -4,20 +4,39 @@ html, body{
   width: 100%;
   height: 100%;
 }
+li{
+  padding-left: 10px;
+  list-style-position: inside;
+  list-style-type: square;
+}
+
 #layout{
-  background-color: rgb(175, 175, 175);
+  /* start with 100% header then on scroll, gets reduced to 20:80 */
   display: grid;
   
   grid-template-columns: auto;
-  grid-template-rows: 25% 75%;
+  grid-template-rows: 15% 85%;
+  /* grid-gap: 5px; */
 }
 
 #header{
-  background-image: url("mount.jpg");
+  font-size: 1.25em;
+  background-image: url("images/mount.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.85;
+  opacity: 1;
 }
+#title{
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+  color: rgb(196, 177, 127);
+}
+
 #main{
   display: grid;
   
@@ -25,8 +44,8 @@ html, body{
   grid-gap: 5px;
 }
 
-
 #sidebar-left{
+  background-color: rgb(245, 245, 245);
   padding: 5px;
   display: grid;
   
@@ -34,19 +53,93 @@ html, body{
   grid-gap: 5px;
 }
 #directories{
-  border: 1px solid black;
+  position: relative;
+  /* border: 1px solid black; */
+  margin: 0;
+  padding: 5px;
+  overflow: hidden;
+  overflow-y: scroll;
+  max-height: 76vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+#directories::-webkit-scrollbar{
+  display: none;
+}
+.dir-item{
+  color: black;
+  text-decoration: none;
+}
+.dir-item:hover{
+  color: rgb(92, 92, 92);
+}
+
 #control{
-  border: 1px solid black;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+#setting{
+  width: 2em;
+  align-self: center;
+  opacity: 0.7;
+}
+#setting:hover{
+  opacity: 0.5;
 }
 
+#post{
+  Background: gray;
+  color: aliceblue;
+  text-decoration: none;
+  text-align: center;
+  /* height: 80%; */
+  
+  padding: 0.625em 1em;
+  border-radius: 15px;
+  flex-grow: 1;
+}
+#post:hover{
+  Background: rgb(88, 88, 88);
+}
+
+/* posted items */
 #middle{
-  border: 1px solid black;
   padding: 10px;
-
+  display: flex;
+  flex-direction: column-reverse;
+  align-self: flex-start;
+  gap: 10px;
 }
+
+.posts{
+  /* border: 1px solid black; */
+  background: rgba(119, 113, 100, 0.4);
+  padding: 10px;
+  border-radius: 15px;
+}
+
 #sidebar-right{
-  border: 1px solid black;
   padding: 10px;
 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  row-gap: 10px;
+}
+.side-image{
+  width: 40%;
+  flex-shrink: 1;
+  align-self: flex-start;
+  
+  transition: all 300ms ease-in-out
+}
+.side-image:hover{
+  width: 56%;
 }

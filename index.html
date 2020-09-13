@@ -17,8 +17,8 @@
         <li><a href="" class="dir-item"> some folder </a></li>
       </ul>
       <div id="control">
-        <a href="" ><img src="src/setting_icon.png" id="setting" alt="Setting"></a>
-        <a href="" id="post">작성</a>
+        <button id="setting"><img src="src/setting_icon.png" id="setting-img" alt="Setting"></button>
+        <button id="post">작성</button >
       </div>
     </div>
     <div id="middle" >
@@ -38,15 +38,17 @@
     </div>
     <div style="background-color: rgb(245, 245, 245);">
       <div id="sidebar-right">
-        <a href="" class="side-image"><img src="images/mount.jpg" style="width: 100%;" alt="Photo"></a>
-        <a href="" class="side-image"><img src="images/mount.jpg" style="width: 100%;" alt="Photo"></a>
-        <a href="" class="side-image"><img src="images/mount.jpg" style="width: 100%;" alt="Photo"></a>
-        <a href="" class="side-image"><img src="images/mount.jpg" style="width: 100%;" alt="Photo"></a>
-        <a href="" class="side-image"><img src="images/mount.jpg" style="width: 100%;" alt="Photo"></a>
-        <a href="" class="side-image"><img src="images/mount.jpg" style="width: 100%;" alt="Photo"></a>
+        <img src="images/mount.jpg" class="side-image" alt="Photo"></a>
+        <img src="images/mount.jpg" class="side-image" alt="Photo"></a>
+        <img src="images/mount.jpg" class="side-image" alt="Photo"></a>
+        <img src="images/mount.jpg" class="side-image" alt="Photo"></a>
+        <img src="images/mount.jpg" class="side-image" alt="Photo"></a>
+        <img src="images/mount.jpg" class="side-image" alt="Photo"></a>
         <!-- photo comes here -->
       </div>
     </div>
+    <div scroll="no" id="overlay"></div>
   </main>
+  <script src="interact.js"></script>
 </body>
 </html>

@@ -9,6 +9,12 @@ li{
   list-style-position: inside;
   list-style-type: square;
 }
+button{
+  border: none;
+}
+button:focus{
+  outline: none;
+}
 
 #layout{
   /* start with 100% header then on scroll, gets reduced to 20:80 */
@@ -75,16 +81,18 @@ li{
 }
 
 #control{
-  padding: 5px;
+  padding: 10px;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 5px;
   justify-content: center;
   align-items: center;
 }
 #setting{
+  padding: 5px;
+}
+#setting-img{
   width: 2em;
-  align-self: center;
   opacity: 0.7;
 }
 #setting:hover{
@@ -92,7 +100,9 @@ li{
 }
 
 #post{
+  font: inherit;
   Background: gray;
+  border: none;
   color: aliceblue;
   text-decoration: none;
   text-align: center;
@@ -125,16 +135,16 @@ li{
 #sidebar-right{
   padding: 10px;
 
+  background-color: rgb(245, 245, 245);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-content: space-around;
   flex-wrap: wrap;
   align-items: flex-start;
   row-gap: 10px;
 }
 .side-image{
-  width: 40%;
+  width: 43%;
   flex-shrink: 1;
   align-self: flex-start;
   
@@ -142,4 +152,17 @@ li{
 }
 .side-image:hover{
   width: 56%;
+}
+
+#overlay{
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
 }
